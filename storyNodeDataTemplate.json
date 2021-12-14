@@ -1,0 +1,9 @@
+{
+    "text": "node text",
+    "buttons": [
+        {
+            "btnId": "id",
+            "btnText": "text"
+        }
+    ]
+}

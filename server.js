@@ -20,15 +20,33 @@ app.get('/', function(req, res, next) {
 })
 
 app.get('/about', function(req, res, next) {
-    next()
+    res.status(200).render('about')
 })
 
 app.get('/rules', function(req, res, next) {
-    next()
+    res.status(200).render('rules')
 })
 
 app.get('/byoa', function(req, res, next) {
-    next()
+    var data = {
+        "text": "This is a test node",
+        "buttons": [
+            {
+                "btnId": "btn1",
+                "btnText": "button 1"
+            },
+            {
+                "btnId": "btn2",
+                "btnText": "button 2"
+            },
+            {
+                "btnId": "btn3",
+                "btnText": "button 3"
+            }
+        ]
+    }
+
+    res.status(200).render('storynode', data)
 })
 
 app.get('*', function(req, res) {
