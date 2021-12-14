@@ -1,0 +1,93 @@
+[
+    {
+        "text": "Node 0: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?",
+        "buttons": [
+            {
+                "btnId": "1",
+                "btnText": "button 1 (1)"
+            },
+            {
+                "btnId": "2",
+                "btnText": "button 2 (2)"
+            }
+        ]
+    },
+    {
+        "text": "Node 1: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?",
+        "buttons": [
+            {
+                "btnId": "3",
+                "btnText": "button 1 (3)"
+            },
+            {
+                "btnId": "4",
+                "btnText": "button 2 (4)"
+            }
+        ]
+    },
+    {
+        "text": "Node 2: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?",
+        "buttons": [
+            {
+                "btnId": "5",
+                "btnText": "button 1 (5)"
+            },
+            {
+                "btnId": "6",
+                "btnText": "button 2 (6)"
+            }
+        ]
+    },
+    {
+        "text": "Node 3: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?",
+        "buttons": [
+            {
+                "btnId": "7",
+                "btnText": "button 1"
+            },
+            {
+                "btnId": "8",
+                "btnText": "button 2"
+            }
+        ]
+    },
+    {
+        "text": "Node 4: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?",
+        "buttons": [
+            {
+                "btnId": "9",
+                "btnText": "button 1"
+            },
+            {
+                "btnId": "10",
+                "btnText": "button 2"
+            }
+        ]
+    },
+    {
+        "text": "Node 5: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?",
+        "buttons": [
+            {
+                "btnId": "11",
+                "btnText": "button 1"
+            },
+            {
+                "btnId": "12",
+                "btnText": "button 2"
+            }
+        ]
+    },
+    {
+        "text": "Node 6: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?",
+        "buttons": [
+            {
+                "btnId": "13",
+                "btnText": "button 1"
+            },
+            {
+                "btnId": "14",
+                "btnText": "button 2"
+            }
+        ]
+    }
+]
