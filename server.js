@@ -2,6 +2,8 @@ var path = require('path')
 var express = require('express')
 var exphbs = require('express-handlebars')
 
+var data = require('./storyNodeTestData.json')
+
 var app = express()
 var port = process.env.PORT || 2282;
 
@@ -27,26 +29,12 @@ app.get('/rules', function(req, res, next) {
     res.status(200).render('rules')
 })
 
-app.get('/byoa', function(req, res, next) {
-    var data = {
-        "text": "This is a test node",
-        "buttons": [
-            {
-                "btnId": "btn1",
-                "btnText": "button 1"
-            },
-            {
-                "btnId": "btn2",
-                "btnText": "button 2"
-            },
-            {
-                "btnId": "btn3",
-                "btnText": "button 3"
-            }
-        ]
-    }
-
-    res.status(200).render('storynode', data)
+app.get('/byoa/:id', function(req, res, next) {
+    var node = data[req.params.id]
+    if (node)
+        res.status(200).render('storynode', node)
+    else
+        next()
 })
 
 app.get('*', function(req, res) {
