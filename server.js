@@ -29,10 +29,14 @@ app.get('/rules', function(req, res, next) {
     res.status(200).render('rules')
 })
 
+app.get('/byoa', function(req, res, next) {
+    res.status(200).render('storynode', data[0])
+})
+
 app.get('/byoa/:id', function(req, res, next) {
     var node = data[req.params.id]
     if (node)
-        res.status(200).render('storynode', node)
+        res.status(200).send(node)
     else
         next()
 })
