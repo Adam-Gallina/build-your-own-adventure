@@ -1,0 +1,26 @@
+header {
+    background-color: rgb(38, 76, 182);
+    color:rgb(198, 197, 255);
+    padding: 0px 40px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 80px;
+}
+
+body {
+    margin: 80px 10px;
+}
+
+footer {
+    background-color: rgb(38, 76, 182);
+    color:rgb(198, 197, 255);
+    padding: 0px 40px;
+    font-weight: bold;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    height: 60px;
+}

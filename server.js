@@ -12,7 +12,23 @@ app.use(express.json());
 app.use(express.static('public'))
 
 app.get('/', function(req, res, next) {
-    res.status(200).render('home')
+    var messages = []
+    for (var i = 0; i < 60; i++)
+        messages.push("Hello BYOA!")
+
+    res.status(200).render('home', {messages:messages})
+})
+
+app.get('/about', function(req, res, next) {
+    next()
+})
+
+app.get('/rules', function(req, res, next) {
+    next()
+})
+
+app.get('/byoa', function(req, res, next) {
+    next()
 })
 
 app.get('*', function(req, res) {
