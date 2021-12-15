@@ -1,7 +1,9 @@
-<p id="node-text">{{ text }}</p>
+<div id="story-node">
+    <p id="node-text">{{ text }}</p>
 
-<ul id="node-buttons">
-{{# each buttons }}
-    <li class="nodeBtn">{{> button }}</li>
-{{/ each}}
-</ul>
+    <ul id="node-buttons">
+    {{# each buttons }}
+        <li class="nodeBtn"><button type="button" id="{{ btnId }}">{{ btnText }}</button></li>
+    {{/ each}}
+    </ul>
+</div>

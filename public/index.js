@@ -1,4 +1,3 @@
-// Test functions for proof of concept
 function LoadElems() {
     var elems = {}
 
@@ -7,36 +6,31 @@ function LoadElems() {
     var btns = document.querySelectorAll('.nodeBtn button')
     for (i = 0; i < btns.length; i++) {
         elems["btn" + i] = btns[i]
-        btns[i].addEventListener('click', getBtnCallback(btns[i].id))
-    }
+        btns[i].addEventListener('click', function(event) {
+            var id = event.target.id
+    
+            var req = new XMLHttpRequest()
+            req.open('GET', '/byoa/' + id + '/data')
+            req.addEventListener('load', function(event) {
+                if (event.target.status != 404) {
+                    var data = JSON.parse(event.target.responseText)
+                    
+                    document.getElementById("story-node").remove()
+                    var newPage = Handlebars.templates.storynode(data)
+                    document.body.insertAdjacentHTML('afterbegin', newPage)
 
-    return elems
-}
+                    //window.history.replaceState(null, document.title, '/byoa/' + id)
+                    window.history.pushState(null, document.title, '/byoa/' + id)
 
-function RenderPage(elems, text, btnData) {
-    elems.text.innerHTML = text
-    for (i = 0; i < btnData.length; i++) {
-        elems["btn" + i].id = btnData[i].btnId
-        elems["btn" + i].innerHTML = btnData[i].btnText
-    }
-}
-
-// @TODO: function is exposed to client, can change pages w/o interacting with buttons
-//      - could potentially change to a page outside of the current branch
-function getBtnCallback(btnId) {
-    return function(event) {
-        var id = event.target.id
-
-        var req = new XMLHttpRequest()
-        req.open('GET', '/byoa/' + id)
-        req.addEventListener('load', function(event) {
-            if (event.target.status != 404) {
-                var data = JSON.parse(event.target.responseText)
-                RenderPage(elems, data.text, data.buttons)
-            }
+                    LoadElems()
+                }
+                else {
+                    console.log("404: Couldn't retrieve node")
+                }
+            })
+            req.send()
         })
-        req.send()
     }
 }
 
-elems = LoadElems()
+LoadElems()

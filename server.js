@@ -36,9 +36,17 @@ app.get('/byoa', function(req, res, next) {
 app.get('/byoa/:id', function(req, res, next) {
     var node = data[req.params.id]
     if (node)
-        res.status(200).send(node)
+        res.status(200).render('storynode', node)
     else
         next()
+})
+
+app.get('/byoa/:id/data', function(req, res, next) {
+    var node = data[req.params.id]
+    if (node)
+        res.status(200).send(node)
+    else
+        res.status(404).send({})
 })
 
 app.get('*', function(req, res) {
